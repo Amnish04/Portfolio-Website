@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap');
+
 /* All text should be centered on smaller screens */
 /* 428px to at least make it work on an Iphone 13pro */
 @media screen and (max-width:500px) {

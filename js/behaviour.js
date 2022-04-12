@@ -6,18 +6,14 @@ function addPayEvent() {
     let questions = document.getElementById("queryType1");
     hiring.addEventListener('focusin', function() {
         payBox.hidden = false;
-        paymentValue.required = true;
-        paymentValue.value = 0;
     });
     comments.addEventListener('focusin', function() {
         payBox.hidden = true;
-        paymentValue.required = false;
-        paymentValue.value = -1; // -1 means not for hiring
+        paymentValue.value = 0; // -1 means not for hiring
     });
     questions.addEventListener('focusin', function() {
         payBox.hidden = true;
-        paymentValue.required = false;
-        paymentValue.value = -1; // -1 means not for hiring
+        paymentValue.value = 0; // -1 means not for hiring
     });
 }
 
@@ -29,31 +25,29 @@ function setRequiredMarkup() {
 }
 
 function notEmpty(value) {
-    if (value.trim().length == 0) { // check length of textarea
-        alert("No input! Please enter your comments.\n");
+    if (value.trim().length == 0) { 
+        alert("Please don't enter empty text!\n");
         return false;
     }
-     return true;
+    return true;
 
 }
 
-function isInput(input) {
-    return input.value;
-}
-
+/* Just checking for empty inputs (just spaces), rest is covered in HTML itself */
 function formValidation() {
-    let inputs = Array.from(document.querySelector("#contactForm").elements).filter(isInput); 
-    // console.log(inputs);
-    document.getElementById("contactForm").addEventListener('submit', function() {
+    let inputs = (document.querySelector("#contactForm").querySelectorAll("input[type='text'], textarea"));
+    console.table(inputs);
+    document.getElementById("contactForm").onsubmit = function() {
+        let rv = true;
         for (let input of inputs) {
             if (!notEmpty(input.value)) {
                 input.value = "";
                 input.focus();
-                return false;
+                rv = false;
             }
         }
-        return true;
-    });
+        return rv;
+    };
 }
 
 window.onload = function() {
@@ -64,5 +58,5 @@ window.onload = function() {
     // Dynamic Textbox
     addPayEvent();
     // Form Validation Event
-    // formValidation();
+    formValidation();
 }
