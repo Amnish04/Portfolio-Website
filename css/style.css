@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap');
 /* All text should be centered on smaller screens */
 /* 428px to at least make it work on an Iphone 13pro */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 @media screen and (max-width:500px) {
     h1, h2, h3, h4, h5, h6, p {
         text-align: center;
@@ -52,6 +58,11 @@ header p, header h1 {
     margin: 0.5em;
 }
 
+header p {
+    font-size: 2em;
+    font-family: 'Caveat', cursive;
+}
+
 hr {
     margin: 0;
     color: #555;
@@ -95,6 +106,10 @@ div.buttons a:hover {
     font-weight: 700;
 }
 
+#aboutMe p {
+    text-align: left;
+}  
+
 /* Infographics Section */
 @media screen and (min-width:500px) { /* Closer to Desktop Size */
     #aboutMe {
@@ -106,6 +121,7 @@ div.buttons a:hover {
     #aboutMe p {
         max-height: 250px;
         overflow-y: auto;
+        text-align: justify;
     }  
 
     #basicInfo {
@@ -280,6 +296,7 @@ footer {
     width: 100%;
     text-align: center;
     border-radius: 5% 5% 0 0;
+    display: flex;
 }
 
 footer h1 {
@@ -297,4 +314,49 @@ footer h1 {
     footer h1 {
         font-size: 15vw;
     }
+}
+
+footer div {
+    width: 50%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.links li {
+    margin: 0 0.5em;
+    padding: 1.2em;
+}
+
+.links img {
+    width: 50px;
+}
+
+.citations li {
+    padding: 0.5em;
+}
+
+.citations a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    font: 500 1em/1.2 Arial;
+}
+
+.citations a:hover {
+    color: lightblue;
+    text-decoration: underline;
 }
