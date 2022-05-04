@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap');
 /* All text should be centered on smaller screens */
-/* 428px to at least make it work on an Iphone 13pro */
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -73,6 +72,10 @@ header img {
     border-radius: 25%;
 }
 
+.clear {
+    clear: both;
+}
+
 /* Container for link buttons */
 div.buttons {
     text-align: center;
@@ -105,51 +108,59 @@ div.buttons a:hover {
 }  
 
 /* Infographics Section */
-@media screen and (min-width:500px) { /* Closer to Desktop Size */
-    #aboutMe {
-        float: left;
-        width: 45%;
-        margin: 0 5% 0 0;
-    }
+.infographics {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    #aboutMe p {
-        max-height: 250px;
-        overflow-y: auto;
-        text-align: justify;
-    }  
+#aboutMe {
+    width: 50%;
+}
 
-    #basicInfo {
-        width: 45%;
-        float: left;
-        margin: 0 0 0 5%;
-    }
-
-    .clear {
-        clear: both;
-    }
+#basicInfo {
+    width: 45%;
 }
 
 #basicInfo p {
-    padding: 0;
-    text-align: left;
+    display: flex;
 }
 
 .property {
-    display: inline-block; /* To adjust the width */
-    min-width: 30%;
-    margin-left: 0;
-    text-align: left;
-    font-weight: 700;
-    text-decoration: underline;
+    display: block;
+    width: 120px;
 }
 
 .value {
-    box-sizing: border-box;
-    display: inline-block; /* To adjust the width */
-    min-width: 50%;
-    padding: 0 0.5em;
-    text-align: center; 
-    word-wrap: normal;
+    display: block;
+    width: calc(100% - 126px);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 772px) { /* Closer to Desktop Size */
+    #aboutMe {
+        width: 100%;
+    }
+    #basicInfo {
+        width: 90%;
+        margin-left: 5%;
+    }
+    #basicInfo h2, #aboutMe h2 {
+        text-align: center;
+    }
+    .infographics {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .property {
+        text-align: left;
+        width: 105px;
+    }
+    .value {
+        text-align: center;
+        width: calc(100%-105px);
+    }
 }
 
 /* Education Section */
@@ -335,6 +346,10 @@ footer ul li {
 
 .links img {
     width: 50px;
+}
+
+.links a:hover {
+    opacity: 0.75;
 }
 
 .citations li {
