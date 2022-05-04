@@ -4,8 +4,8 @@ function addPayEvent() {
     let hiring = document.getElementById("queryType3");
     let comments = document.getElementById("queryType2");
     let questions = document.getElementById("queryType1");
-    hiring.addEventListener('focusin', function() {
-        payBox.hidden = false;
+    hiring.addEventListener('change', function() {
+        payBox.hidden = !payBox.hidden;
     });
     comments.addEventListener('focusin', function() {
         payBox.hidden = true;
@@ -25,7 +25,7 @@ function setRequiredMarkup() {
 }
 
 function notEmpty(value) {
-    if (value.trim().length == 0) { 
+    if (value.trim().length === 0) { 
         alert("Please don't enter empty text!\n");
         return false;
     }
