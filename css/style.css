@@ -129,6 +129,7 @@ div.buttons a:hover {
 .property {
     display: block;
     width: 120px;
+    font-weight: 600;
 }
 
 .value {
