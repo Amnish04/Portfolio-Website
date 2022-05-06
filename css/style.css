@@ -72,6 +72,12 @@ header img {
     border-radius: 25%;
 }
 
+@media screen and (max-width: 500px) {
+    header img {
+        width: 250px;
+    }
+}
+
 .clear {
     clear: both;
 }
@@ -156,7 +162,7 @@ div.buttons a:hover {
     }
     .property {
         text-align: left;
-        width: 105px;
+        width: 110px;
     }
     .value {
         text-align: center;
