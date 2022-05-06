@@ -359,6 +359,11 @@ footer ul li {
     opacity: 0.75;
 }
 
+.citations {
+    display: flex;
+    align-items: center;
+}
+
 .citations li {
     padding: 0.5em;
 }
@@ -367,7 +372,7 @@ footer ul li {
     display: block;
     color: white;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
     font: 500 1em/1.2 Arial;
 }
 
