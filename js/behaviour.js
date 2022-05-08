@@ -50,9 +50,15 @@ function formValidation() {
     };
 }
 
+function setClock() {
+    setInterval(() => {
+        document.getElementById('date').innerHTML = (new Date).toDateString() + ", " + (new Date).toLocaleTimeString();
+    }, 1000);
+}
+
 window.onload = function() {
     // Setting Date
-    document.getElementById('date').innerHTML = (new Date).toDateString();
+    setClock();
     // Setting Required fields markup
     setRequiredMarkup();
     // Dynamic Textbox
