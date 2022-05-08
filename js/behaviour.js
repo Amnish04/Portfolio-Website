@@ -53,7 +53,7 @@ function formValidation() {
 function setClock() {
     setInterval(() => {
         document.getElementById('date').innerHTML = (new Date).toDateString() + ", " + (new Date).toLocaleTimeString();
-    }, 1000);
+    }, 1000*1);
 }
 
 window.onload = function() {
