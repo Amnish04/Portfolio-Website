@@ -228,6 +228,7 @@ div.card:active {
         display: block;
         width: 320px;
         height: 500px;
+        border-radius: 20px;
     }
 
     .card-image {
@@ -247,6 +248,7 @@ div.card:active {
 
     .card img {
         width: 100%;
+        border-radius: 20px 20px 0 0;
     }
 
     /* Typography */
