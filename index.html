@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="preload" href="Images/backImage.jpg" as="image">
-    <link rel="preload" href="Documents/Amnish_SinghArora_Resume.PDF" as="Documents">
     <style>
         header {
             background-image: url('/Images/backImage.jpg');
@@ -40,7 +39,7 @@
                 <p>
                     <span class="firstLetter">A</span>&nbsp; 20 year old Seneca College student majoring in Computer Programming and Analysis. I am deeply intrigued by the concept of raw data being manipulated and turned into information that can be used to solve problems and innovate current technologies. Currently looking for a Software/Web develpoment interniship at a reputed organisation for my 2022 Fall Work Term (CO-OP) to get my feet wet!
                 </p>
-                <p><span class="bold">Date: </span><date id="date"></date></p>
+                <p><span class="bold">Date: </span><span id="date"></span></p>
             </section>
             <!-- Basic Info Section -->
             <section id="basicInfo">
@@ -71,22 +70,26 @@
             <h2>Education
                 <i class="fa-solid fa-book medIcon"></i>
             </h2>
-            <div class="card">
-                <img src="./Images/Seneca.png" alt="Seneca Image">
-                <!-- Rest of the content -->
-                <div class="lowerCard">
-                    <h2>Computer Programming and Analysis</h2>
-                    <h3>Seneca College (2021-2024)(expected)</h3>
-                    <p>This three-year advanced diploma program provides the students with the skills and knowledge to begin your career as a software developer. You will learn programming languages, program design and system analysis. Web concepts are integrated into all courses to develop active database web programs on a variety of operating systems.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./Images/Seneca.png" alt="Seneca Image">
+                    </div>
+                    <div class="card-content">
+                            <h2>Computer Programming and Analysis</h2>
+                            <h3>Seneca College (2021-2024)</h3>
+                        <p>This three-year advanced diploma program provides the students with the skills and knowledge to begin your career as a software developer. You will learn programming languages, program design and system analysis. Web concepts are integrated into all courses to develop active database web programs on a variety of operating systems.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="./Images/school.jpg" alt="School Image">
-                <!-- Rest of the content -->
-                <div class="lowerCard">
-                    <h2>High School</h2>
-                    <h3>DAV International School (2020)</h3>
-                    <p>Graduated from high school majoring in non-medical sciences i.e. Physics, Chemistry and Mathematics after rigorous preparation in the subjects for the IIT-JEE Examination!</p>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./Images/school.jpg" alt="School Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>High School</h2>
+                        <h3>DAV International School (2020)</h3>
+                        <p>Graduated from high school majoring in non-medical sciences i.e. Physics, Chemistry and Mathematics after rigorous preparation in the subjects for the IIT-JEE Examination!</p>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -177,12 +180,12 @@
             <ul>
                 <li><a href="https://www.linkedin.com/in/amnish-singh-arora-6b6209145" target="_blank" title="LinkedIn Page"><img src="./Images/linkedin.png" alt="LinkedIn"></a></li>
                 <li><a href="https://github.com/Amnish04?tab=overview&from=2021-02-01&to=2021-02-28" title="Github" target="_blank"><img src="./Images/github.png" alt="Github"></a></li>
-                <li><a href="https://www.instagram.com/singhamnish/" target="_blank" title="Instagram" target="_blank"><img src="./Images/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.facebook.com/singhamnish" target="_blank" title="Facebook" target="_blank"><img src="./Images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/singhamnish/" target="_blank" title="Instagram"><img src="./Images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/singhamnish" target="_blank" title="Facebook"><img src="./Images/facebook.png" alt="Facebook"></a></li>
             </ul>
         </div>
     </footer>
     <script src="./js/behaviour.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

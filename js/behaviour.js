@@ -4,14 +4,15 @@ function addPayEvent() {
     let hiring = document.getElementById("queryType3");
     let comments = document.getElementById("queryType2");
     let questions = document.getElementById("queryType1");
-    hiring.addEventListener('change', function() {
-        payBox.hidden = !payBox.hidden;
+    hiring.addEventListener('click', function() {
+        paymentValue.value = "";
+        payBox.hidden = false;
     });
-    comments.addEventListener('focusin', function() {
+    comments.addEventListener('change', function() {
         payBox.hidden = true;
         paymentValue.value = 0; // -1 means not for hiring
     });
-    questions.addEventListener('focusin', function() {
+    questions.addEventListener('change', function() {
         payBox.hidden = true;
         paymentValue.value = 0; // -1 means not for hiring
     });
@@ -33,7 +34,7 @@ function notEmpty(value) {
 
 }
 
-/* Just checking for empty inputs (just spaces), rest is covered in HTML itself */
+/* Checking for empty inputs (just spaces), rest is covered in HTML itself */
 function formValidation() {
     let inputs = (document.querySelector("#contactForm").querySelectorAll("input[type='text'], textarea"));
     console.table(inputs);

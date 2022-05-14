@@ -174,15 +174,36 @@ div.buttons a:hover {
 }
 
 /* Education Section */
-#education h2 {
+#education h2, h3 {
     text-align: center;
+    padding: 0.25em;
+    margin: 0;
 }
 
-div.card {
-    margin: 1em 0;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-    transition: 0.4s;
+.card {
+    display: flex;
+    margin: 1em;
+    border: 1px solid black;
+    border-collapse: collapse;
     height: 225px;
+    transition: 0.5s;
+}
+
+.card p {
+    padding: 0.75em;
+    overflow-y: auto;
+    margin: 0;
+    height: 125px;
+}
+
+.card-image {
+    width: 300px;
+}
+
+.card-image img {
+    display: block;
+    width: 300px;
+    height: 100%;
     border: 1px solid black;
 }
 
@@ -196,23 +217,42 @@ div.card:active {
     cursor: grabbing;
 }
 
-.card img {
-    display: inline-block;
-    height: 225px;
-    width: 30%;
-    border: 1px solid black;
-}
+@media screen and (max-width: 888px) {
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-.lowerCard {
-    text-align: center;
-    display: inline-block;
-    height: 225px;
-    width: 60%;
-    overflow: auto;
-    margin-left: 1em;
-}
-.lowerCard p {
-    padding: 1em;
+    .card {
+        display: block;
+        width: 320px;
+        height: 500px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card p {
+        height: 200px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    /* Typography */
+    .card h2, .card h3 {
+        font-size: 1em;
+    }
 }
 
 /* Form Styling */
