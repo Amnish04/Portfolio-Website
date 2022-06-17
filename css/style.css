@@ -42,6 +42,9 @@ header {
     margin: 0;
     padding: 2em;
     padding-top: 5em;
+    background-image: url('/Images/backImage.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 header p, header h1 {
@@ -228,6 +231,7 @@ div.card:active {
         display: block;
         width: 320px;
         height: 500px;
+        border-radius: 20px;
     }
 
     .card-image {
@@ -247,6 +251,7 @@ div.card:active {
 
     .card img {
         width: 100%;
+        border-radius: 20px 20px 0 0;
     }
 
     /* Typography */
