@@ -19,7 +19,7 @@ function addPayEvent() {
 }
 
 function setRequiredMarkup() {
-    let requiredFields = document.querySelectorAll('.required');
+    let requiredFields = document.querySelectorAll('.required'); // required attribute is on labels
     for (let field of requiredFields) {
         field.innerHTML += "*";
     }
