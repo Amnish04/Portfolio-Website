@@ -37,7 +37,6 @@ function notEmpty(value) {
 /* Checking for empty inputs (just spaces), rest is covered in HTML itself */
 function formValidation() {
     let inputs = (document.querySelector("#contactForm").querySelectorAll("input[type='text'], textarea"));
-    console.table(inputs);
     document.getElementById("contactForm").onsubmit = function() {
         let rv = true;
         for (let input of inputs) {
