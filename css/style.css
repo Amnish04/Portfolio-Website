@@ -112,10 +112,6 @@ div.buttons a:hover {
     font-weight: 700;
 }
 
-#aboutMe p {
-    text-align: left;
-}  
-
 /* Infographics Section */
 .infographics {
     display: flex;
@@ -128,6 +124,10 @@ div.buttons a:hover {
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
+}
+
+#aboutMe p {
+    text-align: left;
 }
 
 #basicInfo {
